@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+html, body, #root { height: 100%; }
+body { @apply bg-black text-white antialiased; }
+
+.container-app { @apply max-w-[1400px] mx-auto px-4; }
+.card { @apply bg-zinc-900 rounded-2xl overflow-hidden; }
+.btn { @apply inline-flex items-center justify-center rounded-xl px-4 py-2 font-medium; }
+.btn-primary { @apply bg-white text-black hover:bg-zinc-200 transition; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }

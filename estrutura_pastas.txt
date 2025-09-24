@@ -1,0 +1,34 @@
+.
+├── .gitignore
+├── eslint.config.js
+├── estrutura_pastas.txt
+├── index.html
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── public
+│   └── vite.svg
+├── README.md
+├── src
+│   ├── App.css
+│   ├── App.jsx
+│   ├── assets
+│   │   ├── logoPORTUBE.png
+│   │   └── react.svg
+│   ├── components
+│   │   ├── AgeGate.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── Row.jsx
+│   │   └── VideoCard.jsx
+│   ├── data
+│   │   ├── categories.json
+│   │   └── videos.json
+│   ├── index.css
+│   ├── main.jsx
+│   └── pages
+│       ├── Admin.jsx
+│       └── Home.jsx
+├── tailwind.config.js
+└── vite.config.js
+
+7 directories, 25 files

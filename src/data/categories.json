@@ -1,0 +1,7 @@
+[
+    { "id": "featured", "name": "Destaques" },
+    { "id": "trending", "name": "Em alta" },
+    { "id": "long", "name": "Longos" },
+    { "id": "short", "name": "Curtos" }
+  ]
+  
