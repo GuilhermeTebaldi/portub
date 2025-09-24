@@ -14,6 +14,7 @@ import AdminLogin from './pages/AdminLogin'
 import Search from './pages/Search'
 import Categories from './pages/Categories'
 import Category from './pages/Category'
+import { maybePullOnBoot } from './lib/store'
 
 export default function App() {
   const [ok, setOk] = useState(false)
@@ -24,6 +25,16 @@ export default function App() {
     setOk(localStorage.getItem('portub_age_ok') === '1')
   }, [])
 
+  // puxa do "banco" (GitHub) ao liberar conteúdo e quando voltar para o app
+  useEffect(() => {
+    if (!ok) return
+    maybePullOnBoot(true)
+    const onVis = () => { if (document.visibilityState === 'visible') maybePullOnBoot(true) }
+    document.addEventListener('visibilitychange', onVis)
+    return () => document.removeEventListener('visibilitychange', onVis)
+  }, [ok])
+
+  // atalho "sapo" para admin
   useEffect(() => {
     if (!ok) return
     const onKey = (e) => {
